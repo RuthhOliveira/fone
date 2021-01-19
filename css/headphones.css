@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: rgba(34, 34, 34, 0.877);
+    height: 40px;
+    padding: 10px;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.menu li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    /*margin-right: 100px;*/
+    font-weight: 300;
+}
+.menu li a.ativada{
+    color: #dc143c;
+}
+.menu li a:hover{
+    color: #dc143c;
+}
+.menu li a.border:hover{
+    color: #dc143c;
+}
+.menu li a.border::before{
+    content:"";
+    display:block;
+    width:0; 
+    opacity:0; 
+    border:1px solid #dc143c 
+}
+.menu li a.border:hover::before{
+    width: 30px;
+    opacity: 1; 
+}
+.menu li a.border:hover::before{
+    transition:width .5s linear, opacity .1s 
+}
+/*cards*/
+.cards{
+    display: flex;
+    padding: 50px 50px 0 200px;
+}
+.cards.c2{
+    padding-top: 10px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; 
+  cursor: pointer;
+  margin-left: 20px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+.flip-card-front {
+    border: 1px solid #dc143c;
+    border-radius: 5px;
+    background-color: transparent;
+}
+/*-----------os tamanhos dos fones--------*/
+.flip-card-front.azul{
+    padding-top: 20px;
+}
+.flip-card-front.verde{
+    padding-top: 20px;
+}
+.flip-card-front.vermelho{
+    padding-top: 10px;
+}
+.flip-card-front.roxo{
+    padding-top: 20px;
+}
+.flip-card-front.preto{
+    padding-top: 20px;
+}
+/*-----------os tamanhos dos fones--------*/
+/*----------------a cor dos fones---------*/
+.flip-card-back {
+    text-align: center;
+    background-color: #ff92a475;
+    color: #000;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.flip-card-back.azul {
+    text-align: center;
+    background-color: #1083c375;
+    color: #000;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.flip-card-back.verde {
+    text-align: center;
+    background-color: #4f562d75;
+    color: #000;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.flip-card-back.vermelho {
+    text-align: center;
+    background-color: #b9060975;
+    color: #000;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.flip-card-back.roxo {
+    text-align: center;
+    background-color: #8f75b275;
+    color: #000;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.flip-card-back.preto {
+    text-align: center;
+    background-color: #00000075;
+    color: #000;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+/*----------------a cor dos fones---------*/
+.flip-card-back p.titulo-card{
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin: 30px 0 10px 0;
+}
+.flip-card-back p.desc{
+    font-size: 16px;
+}
+.flip-card-back p.preco{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.flip-card-back button{
+    margin: 10px 0 10px 0;
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fafafa;
+    transition: 0.4s;
+}
+.flip-card-back button:hover{
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+.flip-card-back .mais i{
+    margin: 0 20px;
+}
+.flip-card-back .mais i.fas.fa-star{
+    color: #f9e234;
+}
+.flip-card-back .mais i.fas.fa-star span{
+    color: #000;
+    font-weight: 200;
+}
+.flip-card-back .mais i.far.fa-heart:hover, .flip-card-back .mais i.fas.fa-shopping-cart:hover{
+    color: #dc143c;
+}
+footer{
+    background-color: #222;
+    margin-top: 20px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+footer p.footer{
+    color: rgb(179, 177, 177);
+}

@@ -11,7 +11,7 @@
 .preto{
     position: relative;
     background-color: #222;
-    width: 600px;
+    width: 700px;
     height: 100vh;
 }
 .preto p{
@@ -25,21 +25,22 @@
 .foto img {
     position: absolute;
     width: 350px;
-    margin: 100px -220px;
+    margin: 100px -150px;
 }
 .branco{
     width: 800px;
-    margin-left: 200px;
+    margin-left: 300px;
 }
 .branco ul {
     margin-top: 10px;
     display: flex;
-    justify-content: space-around
+    justify-content: center;
 }
 .branco li a{
     text-transform: capitalize;
     text-decoration: none;
     color: #222;
+    margin-right: 100px;
 }
 .branco li a:hover{
     color: crimson;
@@ -60,6 +61,9 @@
 }
 .branco li a.border:hover::before{
     transition:width .5s linear, opacity .1s 
+}
+.headphone-container{
+    margin-top: 40px;
 }
 .headphone{
     margin-top: 80px;
