@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+}
+.preto{
+    position: relative;
+    background-color: #222;
+    width: 600px;
+    height: 100vh;
+}
+.preto p{
+    font-size: 200px;
+    color: #333333a8;
+    font-weight: bold;
+    text-transform: capitalize;
+    writing-mode: vertical-lr;
+    margin: 50px 150px;
+}
+.foto img {
+    position: absolute;
+    width: 350px;
+    margin: 100px -220px;
+}
+.branco{
+    width: 800px;
+    margin-left: 200px;
+}
+.branco ul {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around
+}
+.branco li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #222;
+}
+.branco li a:hover{
+    color: crimson;
+}
+.branco li a.border:hover{
+    color: crimson;
+}
+.branco li a.border::before{
+    content:"";
+    display:block;
+    width:0; 
+    opacity:0; 
+    border:1px solid crimson 
+}
+.branco li a.border:hover::before{
+    width: 30px;
+    opacity: 1; 
+}
+.branco li a.border:hover::before{
+    transition:width .5s linear, opacity .1s 
+}
+.headphone{
+    margin-top: 80px;
+    color: #666;
+    display: flex;
+}
+.headphone p{
+    padding: 0 10px 20px 10px ;
+}
+.title p{
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.classificacao{
+    color: #f9e234;
+}
+.preco{
+    margin: 0 10px 30px 0;
+    font-weight: bold;
+    font-size:30px;
+    text-transform: uppercase;
+}
+.descricao{
+    width: 400px;
+}
+.btn button{
+    width: 170px;
+    margin-top: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+.btn button.selecionado{
+    background-color: #dc143c;
+    border: 1px solid #dc143c;
+    color: #fff;
+    font-weight: bold;
+}
+.btn button.selecionado:hover, .btn button.transparente:hover{
+    background-color: #222;
+    border: 1px solid #222;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.btn button.transparente{
+    border: 1px solid #dc143c;
+    background-color: transparent;
+    color: #dc143c;
+    font-weight: bold;
+}
