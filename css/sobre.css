@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    background-color: #fafafa;
+}
+.menu{
+    background-color: rgba(34, 34, 34, 0.877);
+    height: 40px;
+    padding: 10px;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.menu li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    /*margin-right: 100px;*/
+    font-weight: 300;
+}
+.menu li a.ativada{
+    color: #dc143c;
+}
+.menu li a:hover{
+    color: #dc143c;
+}
+.menu li a.border:hover{
+    color: #dc143c;
+}
+.menu li a.border::before{
+    content:"";
+    display:block;
+    width:0; 
+    opacity:0; 
+    border:1px solid #dc143c 
+}
+.menu li a.border:hover::before{
+    width: 30px;
+    opacity: 1; 
+}
+.menu li a.border:hover::before{
+    transition:width .5s linear, opacity .1s 
+}
+.ilustracao{
+    display: flex;
+}
+.ilustracao p{
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    margin: 90px 0 0 900px ;
+    width: 450px;
+    height: 380px;
+    background-color: #dc143c44;
+}
